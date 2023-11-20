@@ -15,24 +15,47 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class CityDaoImpl implements CityDao {
 
+//    @Autowired
+//    DynamoDBMapper dynamoDBMapper;
     @Autowired
-    DynamoDBMapper dynamoDBMapper;
+    City city1;
+    @Autowired
+    City city2;
+    @Autowired
+    City city3;
 
     private  final Logger logger = LoggerFactory.getLogger(CityDaoImpl.class);
     @Override
     public JSONObject getCitybyId(String cityId) {
-                //if get result from DB.
-        boolean flag=true;
-        JSONObject params= null;
-        try {
-            params = JSONObject.parseObject(JSON.toJSONString(dynamoDBMapper.load(City.class, cityId)));
-        }catch (AmazonDynamoDBException e){
-            params=null;
-            logger.error(ExceptionEnumMsg.NOTFOUNDCITY.getErrorCode());
-        }catch (Exception e){
-            params=null;
-            logger.error(ExceptionEnumMsg.NOTFOUNDCITY.getErrorCode());
+//                //if get result from DB.
+//        boolean flag=true;
+//        JSONObject params= null;
+//        try {
+//            params = JSONObject.parseObject(JSON.toJSONString(dynamoDBMapper.load(City.class, cityId)));
+//        }catch (AmazonDynamoDBException e){
+//            params=null;
+//            logger.error(ExceptionEnumMsg.NOTFOUNDCITY.getErrorCode());
+//        }catch (Exception e){
+//            params=null;
+//            logger.error(ExceptionEnumMsg.NOTFOUNDCITY.getErrorCode());
+//        }
+//        return params;
+
+        //get result from mock data
+        JSONObject returnJason;
+        switch (cityId){
+            case "1":
+                returnJason=(JSONObject) JSON.toJSON(city1);
+                break;
+            case "2":
+                returnJason=(JSONObject) JSON.toJSON(city2);
+                break;
+            case "3":
+                returnJason=(JSONObject) JSON.toJSON(city3);
+                break;
+            default:
+                returnJason=null;
         }
-        return params;
+        return returnJason;
     }
 }

@@ -13,9 +13,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AwsUtilsConfig {
     //todo get accesskey&&secretkey in AWS secret manager
-    @Value("${accessKey}")
+    @Value("")
     private  String accessKey;
-    @Value("${secretKey}")
+    @Value("")
     private  String secretKey;
     //get AWS connection
     public  AWSCredentialsProvider getAwsProvider(){
