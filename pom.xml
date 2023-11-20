@@ -48,6 +48,10 @@
             <artifactId>aws-java-sdk-dynamodb</artifactId>
             <version>1.11.46</version><!-- aws dynamodb -->
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
     </dependencies>
 
 
