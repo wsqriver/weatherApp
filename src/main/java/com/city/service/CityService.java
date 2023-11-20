@@ -1,8 +1,8 @@
-package com.service;
+package com.city.service;
 
 import com.alibaba.fastjson.JSONObject;
 
 public interface CityService {
 
-    public JSONObject getCitybyId(String cityId);
+     JSONObject getCitybyId(String cityId);
 }

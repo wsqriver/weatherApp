@@ -1,7 +1,7 @@
-package com.dao;
+package com.city.dao;
 
 import com.alibaba.fastjson.JSONObject;
 
 public interface CityDao {
-    public JSONObject getCitybyId(String cityId);
+     JSONObject getCitybyId(String cityId);
 }

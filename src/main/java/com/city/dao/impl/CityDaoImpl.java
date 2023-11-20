@@ -1,7 +1,7 @@
-package com.dao.impl;
+package com.city.dao.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.dao.CityDao;
+import com.city.dao.CityDao;
 
 public class CityDaoImpl implements CityDao {
     @Override

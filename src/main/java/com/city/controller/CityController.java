@@ -1,7 +1,7 @@
-package com.controller;
+package com.city.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.service.CityService;
+import com.city.service.CityService;
 import com.tools.ExceptionEnumMsg;
 import com.tools.ResponseUtils;
 import org.springframework.beans.factory.annotation.Autowired;

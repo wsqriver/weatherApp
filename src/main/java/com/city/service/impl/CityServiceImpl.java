@@ -1,8 +1,8 @@
-package com.service.impl;
+package com.city.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.dao.CityDao;
-import com.service.CityService;
+import com.city.dao.CityDao;
+import com.city.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
